@@ -15,7 +15,8 @@ $(document).ready(function(){
 // Start a new game on clicking of "new game" button
 function newGame () {
 	$(".new").click(function(){
-		// Generate secret number between 1 and 100 
+		// Generate secret number between 1 and 100
+		$('<input type="text" class = "text'+ (++i) +'" onclick="this.value=\'\'" value="Enter Choice #' + i + '"/>');
 		return Math.floor((Math.random() * 100) + 1);
 	});
 	// User should get feddback in each guess - choose your own ranges
