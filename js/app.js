@@ -33,9 +33,9 @@ $(document).ready(function(){
 	});
 
 	// User should get feedback in each guess - choose your own ranges
-	$("#guessbutton").click(function(){
-	$('#feedback').hide('Make your Guess');
-	$('#feedback').append('<h2>good guess!</h2>');
+	// $("#guessbutton").click(function(){
+	// $('#feedback').hide('Make your Guess');
+	// $('#feedback').append('<h2>good guess!</h2>');
 }
 	
 // Game should track how many guesses the user has made should appear in span#count
