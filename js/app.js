@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
 	var randomNumber = 0;
+	var counter = 0;
 
 	/*--- Display information modal box ---*/
   	$(".what").click(function(){
@@ -17,11 +18,12 @@ $(document).ready(function(){
 	$('.new').click(function(){	
 		randomNumber = newGame();
 		console.log(randomNumber);
-	// clear field on new game
+	// clear field on clicking of "new game" 
 		$('input[type="text"]').val('');
+
 	});
 
-	// Start a new game on clicking of "new game" button
+	// Start a new game on clicking of "new game"  
 	function newGame () {
 		return Math.floor((Math.random() * 100) + 1);
 	}
@@ -30,19 +32,16 @@ $(document).ready(function(){
 	$('.guessButton').click(function() {
     var counter = $('span#count').val();
     counter++;
-    $('.guessButton').val(counter);
-	});
+});
+	// Ensure users provide valid inputs between 1 - 100
+		if ('Guess' > 100) {
+		alert("Please guess a number between 1 and 100!");
+	}
+
+	// Supply user with list of numbers they guessed so far
 
 
 }); 
-
-	// $('<input type="text" class = "text'+ (++i) +'" onclick="this.value=\'\'" value="Enter Choice #' + i + '"/>');
-	// });
-
-
-	// $('.new').click(function(){
-	// $('#userGuess').remove();	
-	// });
 
 	// User should get feedback in each guess - choose your own ranges
 // 	$("#guessbutton").click(function(){
@@ -51,8 +50,7 @@ $(document).ready(function(){
 // }
 	
 
-// Supply user with list of numbers they guessed so far
-// Ensure users provide valid inputs between 1 - 100
+
 
 
 
