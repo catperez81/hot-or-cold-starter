@@ -27,25 +27,25 @@ $(document).ready(function(){
 	function newGame () {
 		return Math.floor((Math.random() * 100) + 1);
 	}
-	
-	// Game should track how many guesses the user has made should appear in span#count
+	// Supply user with list of numbers they guessed so far
 	$('#guessButton').click(function(event) {
-	event.preventDefault();
-	var userGuess = $('#userGuess').val();
+		event.preventDefault();
+		var userGuess = $('#userGuess').val();
 		alert(userGuess);
+		$('input[type="text"]').val('');
+
 	// Ensure users provide valid inputs between 1 - 100
 	var userGuess = $('#userGuess').val(); 
 		if (userGuess > 100) {
 		alert("Please guess a number between 1 and 100!");
 	}
-    // var counter = $('span#count').val();
-    // counter++;
+	// Game should track how many guesses the user has made should appear in span#count
+    var counter = $('#count').val();
+    	counter++;
+    	alert(counter);
+
 });
 	
-
-
-	// Supply user with list of numbers they guessed so far
-
 
 }); 
 
