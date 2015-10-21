@@ -35,7 +35,7 @@ $(document).ready(function(){
 		$('input[type="text"]').val('');
 
 	// Ensure users provide valid inputs between 1 - 100
-	var userGuess = $('#userGuess').val(); 
+	var userGuess = $('#userGuess').val(''); 
 		if (userGuess > 100) {
 		alert("Please guess a number between 1 and 100!");
 	}
@@ -43,6 +43,7 @@ $(document).ready(function(){
     var counter = $('#count').val();
     	counter++;
     	alert(counter);
+    $('#count').append('counter');
 
 });
 	
