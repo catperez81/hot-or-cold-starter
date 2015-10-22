@@ -30,6 +30,21 @@ $(document).ready(function(){
 		return localRandom;
 	}
 
+	// function checkTemp(userGuess) {
+	// 	alert('checkTemp userGuess' + userGuess);
+
+	// 	var difference + Math.abs(userGuess - randomNumber);
+	// 	if (difference ==0) {
+	// 		alert('Correct');
+	// 	} else if (difference < 10) {
+	// 		alert('Getting Warm');
+	// 	} else if (difference < 20) {
+	// 		alert('Getting Warmer');
+	// 	}
+
+	// }
+
+
 	// Supply user with list of numbers they guessed so far
 	$('#guessButton').click(function(event) {
 		event.preventDefault();
@@ -42,10 +57,14 @@ $(document).ready(function(){
 		alert("Please guess a number between 1 and 100!");
 	}
 	// Game should track how many guesses the user has made should appear in span#count
+	// Game should track the guess values as list items 
     	counter++;
     	// alert(counter);
     	$('#count').text(counter);
     	$('#guessList').append('<li>' + userGuess + '</li>');
+
+
+    	checkTemp(userGuess);
 
 });
 	
@@ -59,11 +78,7 @@ $(document).ready(function(){
 	// $('#feedback').append('<h2>good guess!</h2>');
 // }
 // =======
-// Game should track how many guesses the user has made should appear in span#count
-	// $("#guessbutton").click(function(){
-	// $('#feedback').hide('Make your Guess');
-	// $('#feedback').append('<h2>good guess!</h2>');
-// }
+
 // >>>>>>> master
 	
 
