@@ -18,8 +18,15 @@ $(document).ready(function(){
 	$('.new').click(function(){	
 		randomNumber = newGame();
 		console.log(randomNumber);
+
 	// clear field on clicking of "new game" 
 		$('input[type="text"]').val('');
+
+	// clear field on clicking of "new game" 
+		$('#count').text('0');
+
+	// clear field on clicking of "new game" 
+		$('#guessList').empty('');
 
 	});
 
@@ -64,7 +71,7 @@ $(document).ready(function(){
     	$('#guessList').append('<li>' + userGuess + '</li>');
 
 
-    	checkTemp(userGuess);
+    	// checkTemp(userGuess);
 
 });
 	
