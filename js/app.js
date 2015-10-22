@@ -36,21 +36,32 @@ $(document).ready(function(){
 		console.log(localRandom);
 		return localRandom;
 	}
+	// User should get feedback in each guess - choose your own ranges
+	function checkTemp(userGuess) {
+		// alert('checkTemp userGuess' + userGuess);
 
-	// function checkTemp(userGuess) {
-	// 	alert('checkTemp userGuess' + userGuess);
+		var difference = Math.abs(userGuess - randomNumber);
+		if (difference == 0) {
+			alert('Awesome! You guessed right!');
+		} else if (difference < 10) {
+			alert('Getting Warm');
+		} else if (difference < 20) {
+			alert('Getting Warmer');
+		} else if (difference < 30) {
+			alert('Getting Cool');
+		} else if (difference < 40) {
+			alert('Getting Cooler');
+		} else if (difference < 50) {
+			alert('Cold');
+		} else if (difference < 60) {
+			alert('Colder');
+		} else if (difference < 70) {
+			alert('Really Cold');
+		} else if (difference < 80) {
+			alert('Freezing');
+		}
 
-	// 	var difference + Math.abs(userGuess - randomNumber);
-	// 	if (difference ==0) {
-	// 		alert('Correct');
-	// 	} else if (difference < 10) {
-	// 		alert('Getting Warm');
-	// 	} else if (difference < 20) {
-	// 		alert('Getting Warmer');
-	// 	}
-
-	// }
-
+	}
 
 	// Supply user with list of numbers they guessed so far
 	$('#guessButton').click(function(event) {
@@ -71,22 +82,13 @@ $(document).ready(function(){
     	$('#guessList').append('<li>' + userGuess + '</li>');
 
 
-    	// checkTemp(userGuess);
+    	checkTemp(userGuess);
 
 });
 	
 
 }); 
 
-	// User should get feedback in each guess - choose your own ranges
-// <<<<<<< HEAD
-	// $("#guessbutton").click(function(){
-	// $('#feedback').hide('Make your Guess');
-	// $('#feedback').append('<h2>good guess!</h2>');
-// }
-// =======
-
-// >>>>>>> master
 	
 
 
